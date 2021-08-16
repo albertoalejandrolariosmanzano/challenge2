@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Download') {
+            steps {
+                sh 'git clone git@github.com:albertoalejandrolariosmanzano/challenge2.git'
+            }
+        }
+        stage('Running') {
+            steps {
+                sh 'cd challenge2 && docker-compose up -d --build'
+            }
+        }
+    }
+}
+// docker login -u smraalm
+// 7b3bcd27-39ed-4acb-a58c-df4e2a95b28a
