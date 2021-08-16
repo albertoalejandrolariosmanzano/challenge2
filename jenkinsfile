@@ -16,5 +16,3 @@ pipeline {
         }
     }
 }
-// docker login -u smraalm
-// 7b3bcd27-39ed-4acb-a58c-df4e2a95b28a
